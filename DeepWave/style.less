@@ -1,0 +1,77 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #010707;
+    font-family: "Roboto", sans-serif;
+    header{
+        background-image: url("Images/VictorEneUnsplashTurtle.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: fixed;
+        height: 100vh;
+        h1{
+            margin: 0;
+        }
+        .hamburger{
+            position: fixed;
+            top: 2vh;
+            right: 2vh;
+            z-index: 100;
+            .hamburgerCheckbox{
+                display: none;
+            }
+            .hamburgerToggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                img{
+                    width: 8vw;
+                    transition: opacity 0.3s ease;
+                }
+                .menuIcone{
+                    display: block;
+                }
+                .crossIcone{
+                    display: none;
+                }
+            }
+        }
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: -50vw;
+            width: 50vw;
+            height: 100vh;
+            background-color: rgba(1, 7, 7, 0.2);
+            transform: translateX(100%);
+            transition: right 0.3s ease-in-out;
+            z-index: 99;
+            padding: 2vw;
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin-top: 5vh;
+                li{
+                    margin: 2vh 0;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+        .hamburgerCheckbox:checked ~ .sidebar{
+            transform: translateX(0);
+        }
+        .hamburgerCheckbox:checked ~ .hamburger .hamburgerToggle .menuIcone{
+            display: none;
+        }
+        .hamburgerCheckbox:checked ~ .hamburger .hamburgerToggle .crossIcone{
+            display: block;
+        }
+    }
+}

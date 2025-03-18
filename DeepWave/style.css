@@ -1,0 +1,76 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #010707;
+  font-family: "Roboto", sans-serif;
+}
+body header {
+  background-image: url("Images/VictorEneUnsplashTurtle.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  height: 100vh;
+}
+body header h1 {
+  margin: 0;
+}
+body header .hamburger {
+  position: fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 100;
+}
+body header .hamburger .hamburgerCheckbox {
+  display: none;
+}
+body header .hamburger .hamburgerToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body header .hamburger .hamburgerToggle img {
+  width: 8vw;
+  transition: opacity 0.3s ease;
+}
+body header .hamburger .hamburgerToggle .menuIcone {
+  display: block;
+}
+body header .hamburger .hamburgerToggle .crossIcone {
+  display: none;
+}
+body header .sidebar {
+  position: fixed;
+  top: 0;
+  right: -50vw;
+  width: 50vw;
+  height: 100vh;
+  background-color: rgba(1, 7, 7, 0.2);
+  transform: translateX(100%);
+  transition: right 0.3s ease-in-out;
+  z-index: 99;
+  padding: 2vw;
+}
+body header .sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5vh;
+}
+body header .sidebar ul li {
+  margin: 2vh 0;
+}
+body header .sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 4vw;
+}
+body header .hamburgerCheckbox:checked ~ .sidebar {
+  transform: translateX(0);
+}
+body header .hamburgerCheckbox:checked ~ .hamburger .hamburgerToggle .menuIcone {
+  display: none;
+}
+body header .hamburgerCheckbox:checked ~ .hamburger .hamburgerToggle .crossIcone {
+  display: block;
+}
