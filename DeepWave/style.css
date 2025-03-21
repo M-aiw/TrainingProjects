@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #010707;
   font-family: "Roboto", sans-serif;
+  color: white;
 }
 body header {
   background-image: url("Images/VictorEneUnsplashTurtle.jpg");
@@ -54,8 +55,11 @@ body header .sidebar {
 }
 body header .sidebar ul {
   list-style-type: none;
-  padding: 0;
   margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50%;
 }
 body header .sidebar ul li {
   margin: 2vh 0;

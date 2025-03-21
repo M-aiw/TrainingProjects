@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: url(Images/IsabelGalvezUnsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif;
+}
+nav{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+nav li{
+    padding: 10px;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover{
+    color: #BE6D7C;
+    font-weight: bolder
+}
+nav .logo{
+    margin-right: auto;
+    font-family: "Pacifico", cursive;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 250px;
+    z-index: 999;
+    border-radius: 0 0 0 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.sidebar .top{
+    margin-top: 20%;
+}
+svg{
+    display: none;
+}
+
+/* Responsive Menu */
+
+@media(max-width:780px){
+    .closeOnPhone{
+        display: none;
+    }
+    svg{
+        display: flex;
+    }
+
+}
+
+@media(max-width:500px){
+    .sidebar{
+        height: 100vh;
+        border-radius: 20px 0 0 20px;
+    }
+    .sidebar li{
+        padding: 60px;
+    }
+    .sidebar li a{
+        font-size: 1.2rem;
+    }
+}
